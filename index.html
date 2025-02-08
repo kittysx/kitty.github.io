@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Word Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+    #words-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-width: 600px;
+      justify-content: center;
+    }
+    .word {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      padding: 5px 10px;
+      background-color: #f0f0f0;
+      border-radius: 4px;
+    }
+    .copy-btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .copy-btn:active {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div id="words-container">
+    <div>
+      <h2>12 Random Words</h2>
+      <div id="words12" class="word-list"></div>
+      <button class="copy-btn" onclick="copyToClipboard('words12')">Copy 12 Words</button>
+    </div>
+    <div>
+      <h2>24 Random Words</h2>
+      <div id="words24" class="word-list"></div>
+ 54     <button class="copy-btn" onclick="copyToClipboard('words24')">Copy 24 Words</button>
+    </div>
+    <button onclick="generateWords()">Generate Random Words</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
